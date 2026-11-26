@@ -7,12 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		014E031CC1A97FAB21045236 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC4F4CF7F2BE8DF6753B0FF /* Models.swift */; };
+		1316C8EA044A38BE673DE42F /* MapScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D56606244312CF58B3CA232 /* MapScreen.swift */; };
+		1A868CC9CABD84C0F7C221DF /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C018615BDDC9A84717C414 /* AppState.swift */; };
+		1CB2E67EB7BFD8C17CCF2C3B /* MapCanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B10691082041E008C2B947 /* MapCanvasView.swift */; };
+		1EBB06913E05396AD9357224 /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01CB115B40B0768CA1E329B /* Components.swift */; };
+		268563AE53B4F8855D528B2A /* RegionPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1508BD166728D47F22E712F /* RegionPickerView.swift */; };
+		3133B95F4055FA1898493435 /* StatsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B046F47915DDBD994824649B /* StatsScreen.swift */; };
+		32C7A5EC2B68EBFFF9DD7AA1 /* DemoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D38589B1482F33AA1F31ADE /* DemoData.swift */; };
+		361D62C7882CC7F74F4AC678 /* AutoImportScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3311C0615B9F6AD193614535 /* AutoImportScreen.swift */; };
 		4530F0AAEF594DC07A5EEAB0 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F183BEF5965D02F11B221D6 /* RootView.swift */; };
 		5695EA73C3F387130438F038 /* TripMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B7AAD7B306D0F7A52A1664 /* TripMain.swift */; };
+		58E988AB51B91256D0EAE82C /* RegionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F96C0D44DBEC9AB9DC87B30 /* RegionSheet.swift */; };
 		5EA3E0ECE2CF138E9894D095 /* world.json in Resources */ = {isa = PBXBuildFile; fileRef = B1286F249862C477366A76EF /* world.json */; };
+		639A14F6FF08C8D890C65D47 /* TripListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E751EF0D5AC6EAD526BC38C /* TripListScreen.swift */; };
+		65195DB6DC871B31DE2A7559 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E558A64A3CF9E0DBE44F955 /* Theme.swift */; };
 		695C0D132FC458F412387E62 /* TripCore in Frameworks */ = {isa = PBXBuildFile; productRef = D4AD6043E366EEA14DA6D95B /* TripCore */; };
 		6BC29F406878E87EACC16ADB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19316BEB769E4C0510898AF1 /* Assets.xcassets */; };
+		7C3DF93245A42B7B4DA5770A /* MediaViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4E74A958C8B2BDCAEC6318 /* MediaViewer.swift */; };
+		848B95D388D28423032BA46A /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68534AFCCEBE6121A9192506 /* SettingsScreen.swift */; };
+		93291D072B2A4C182D932CFB /* TripDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CF9C2C3346E28495D20770 /* TripDetailScreen.swift */; };
 		A43F18701CB4BE2A36A96740 /* TripSmokeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0866096E8D07572AFEF5A2 /* TripSmokeTests.swift */; };
+		D413533EAAFB7BFDBDA9E862 /* TripEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86270A6C9297DB8FB25AD81F /* TripEditorView.swift */; };
+		D8C387FDD633F3C759CCE52C /* MapPackStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB09D5DAE267496544405AA /* MapPackStore.swift */; };
+		E2CE523932435CC0DB98BCBC /* PhotoLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5EFED1EF9A8B17EDB8C134 /* PhotoLibrary.swift */; };
 		F576F6D29E4AED6D42DB35DC /* turkey.json in Resources */ = {isa = PBXBuildFile; fileRef = A3C2BE5C7F070BF7A7B3A067 /* turkey.json */; };
 /* End PBXBuildFile section */
 
@@ -28,15 +46,33 @@
 
 /* Begin PBXFileReference section */
 		19316BEB769E4C0510898AF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1AC4F4CF7F2BE8DF6753B0FF /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		2EB09D5DAE267496544405AA /* MapPackStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPackStore.swift; sourceTree = "<group>"; };
+		3311C0615B9F6AD193614535 /* AutoImportScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoImportScreen.swift; sourceTree = "<group>"; };
+		3E558A64A3CF9E0DBE44F955 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		3F183BEF5965D02F11B221D6 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		41CEBFC86F77EDE3A2380AF6 /* Trip.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Trip.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		51CF9C2C3346E28495D20770 /* TripDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailScreen.swift; sourceTree = "<group>"; };
+		58C018615BDDC9A84717C414 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		5FD8E25A510873E3203CBD12 /* TripUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = TripUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		68534AFCCEBE6121A9192506 /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
+		6C4E74A958C8B2BDCAEC6318 /* MediaViewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaViewer.swift; sourceTree = "<group>"; };
+		6F96C0D44DBEC9AB9DC87B30 /* RegionSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionSheet.swift; sourceTree = "<group>"; };
+		7D56606244312CF58B3CA232 /* MapScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreen.swift; sourceTree = "<group>"; };
+		7E751EF0D5AC6EAD526BC38C /* TripListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListScreen.swift; sourceTree = "<group>"; };
+		86270A6C9297DB8FB25AD81F /* TripEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripEditorView.swift; sourceTree = "<group>"; };
+		8D38589B1482F33AA1F31ADE /* DemoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoData.swift; sourceTree = "<group>"; };
 		8E55B0890CDBD1487A508D46 /* TripCore */ = {isa = PBXFileReference; lastKnownFileType = folder; name = TripCore; path = Packages/TripCore; sourceTree = SOURCE_ROOT; };
+		A1508BD166728D47F22E712F /* RegionPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionPickerView.swift; sourceTree = "<group>"; };
 		A3C2BE5C7F070BF7A7B3A067 /* turkey.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = turkey.json; sourceTree = "<group>"; };
 		AB1D0291F3DEF1A5E1B35C12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		AE5EFED1EF9A8B17EDB8C134 /* PhotoLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibrary.swift; sourceTree = "<group>"; };
+		B01CB115B40B0768CA1E329B /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
+		B046F47915DDBD994824649B /* StatsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsScreen.swift; sourceTree = "<group>"; };
 		B1286F249862C477366A76EF /* world.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = world.json; sourceTree = "<group>"; };
 		B3B7AAD7B306D0F7A52A1664 /* TripMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripMain.swift; sourceTree = "<group>"; };
 		CF0866096E8D07572AFEF5A2 /* TripSmokeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripSmokeTests.swift; sourceTree = "<group>"; };
+		D1B10691082041E008C2B947 /* MapCanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCanvasView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +95,14 @@
 			path = TripUITests;
 			sourceTree = "<group>";
 		};
+		38936E7E1D3BA5725E55836A /* Stats */ = {
+			isa = PBXGroup;
+			children = (
+				B046F47915DDBD994824649B /* StatsScreen.swift */,
+			);
+			path = Stats;
+			sourceTree = "<group>";
+		};
 		469EEB24DE09F8FB4895AA99 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -68,12 +112,26 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		57A609F200FBDA877A845CF2 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				D1B10691082041E008C2B947 /* MapCanvasView.swift */,
+				7D56606244312CF58B3CA232 /* MapScreen.swift */,
+				A1508BD166728D47F22E712F /* RegionPickerView.swift */,
+				6F96C0D44DBEC9AB9DC87B30 /* RegionSheet.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
 		5B8D96AFE7F6F88010FDF978 /* Trip */ = {
 			isa = PBXGroup;
 			children = (
 				783E601C6F345BB7E421C07F /* App */,
+				E87ED3E01F7EAA369FDD8A4F /* DesignSystem */,
 				6884B653832F6C3B11D0ED00 /* Features */,
+				FD8BD619A7BF75DE42803838 /* Models */,
 				A688DD56B967EBB505B62715 /* Resources */,
+				694BBF48E07D99168CD1788B /* Services */,
 				AB1D0291F3DEF1A5E1B35C12 /* Info.plist */,
 			);
 			path = Trip;
@@ -89,20 +147,54 @@
 			);
 			sourceTree = "<group>";
 		};
+		6779ADAC627452692185ED58 /* Trips */ = {
+			isa = PBXGroup;
+			children = (
+				6C4E74A958C8B2BDCAEC6318 /* MediaViewer.swift */,
+				51CF9C2C3346E28495D20770 /* TripDetailScreen.swift */,
+				86270A6C9297DB8FB25AD81F /* TripEditorView.swift */,
+				7E751EF0D5AC6EAD526BC38C /* TripListScreen.swift */,
+			);
+			path = Trips;
+			sourceTree = "<group>";
+		};
 		6884B653832F6C3B11D0ED00 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				90E9A75E40DA3CEE533F52D8 /* AutoImport */,
+				57A609F200FBDA877A845CF2 /* Map */,
+				DA88544B84C1CCCEBA3CB5DF /* Settings */,
+				38936E7E1D3BA5725E55836A /* Stats */,
+				6779ADAC627452692185ED58 /* Trips */,
 			);
 			path = Features;
+			sourceTree = "<group>";
+		};
+		694BBF48E07D99168CD1788B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2EB09D5DAE267496544405AA /* MapPackStore.swift */,
+				AE5EFED1EF9A8B17EDB8C134 /* PhotoLibrary.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		783E601C6F345BB7E421C07F /* App */ = {
 			isa = PBXGroup;
 			children = (
+				58C018615BDDC9A84717C414 /* AppState.swift */,
 				3F183BEF5965D02F11B221D6 /* RootView.swift */,
 				B3B7AAD7B306D0F7A52A1664 /* TripMain.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		90E9A75E40DA3CEE533F52D8 /* AutoImport */ = {
+			isa = PBXGroup;
+			children = (
+				3311C0615B9F6AD193614535 /* AutoImportScreen.swift */,
+			);
+			path = AutoImport;
 			sourceTree = "<group>";
 		};
 		A688DD56B967EBB505B62715 /* Resources */ = {
@@ -114,12 +206,38 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		DA88544B84C1CCCEBA3CB5DF /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				68534AFCCEBE6121A9192506 /* SettingsScreen.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		E87ED3E01F7EAA369FDD8A4F /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				B01CB115B40B0768CA1E329B /* Components.swift */,
+				3E558A64A3CF9E0DBE44F955 /* Theme.swift */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
 		EDDE207924910C3D97C85DCD /* Packages */ = {
 			isa = PBXGroup;
 			children = (
 				8E55B0890CDBD1487A508D46 /* TripCore */,
 			);
 			path = Packages;
+			sourceTree = "<group>";
+		};
+		FD8BD619A7BF75DE42803838 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8D38589B1482F33AA1F31ADE /* DemoData.swift */,
+				1AC4F4CF7F2BE8DF6753B0FF /* Models.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		FEAA18816C3541F589EFFB86 /* MapPacks */ = {
@@ -241,7 +359,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A868CC9CABD84C0F7C221DF /* AppState.swift in Sources */,
+				361D62C7882CC7F74F4AC678 /* AutoImportScreen.swift in Sources */,
+				1EBB06913E05396AD9357224 /* Components.swift in Sources */,
+				32C7A5EC2B68EBFFF9DD7AA1 /* DemoData.swift in Sources */,
+				1CB2E67EB7BFD8C17CCF2C3B /* MapCanvasView.swift in Sources */,
+				D8C387FDD633F3C759CCE52C /* MapPackStore.swift in Sources */,
+				1316C8EA044A38BE673DE42F /* MapScreen.swift in Sources */,
+				7C3DF93245A42B7B4DA5770A /* MediaViewer.swift in Sources */,
+				014E031CC1A97FAB21045236 /* Models.swift in Sources */,
+				E2CE523932435CC0DB98BCBC /* PhotoLibrary.swift in Sources */,
+				268563AE53B4F8855D528B2A /* RegionPickerView.swift in Sources */,
+				58E988AB51B91256D0EAE82C /* RegionSheet.swift in Sources */,
 				4530F0AAEF594DC07A5EEAB0 /* RootView.swift in Sources */,
+				848B95D388D28423032BA46A /* SettingsScreen.swift in Sources */,
+				3133B95F4055FA1898493435 /* StatsScreen.swift in Sources */,
+				65195DB6DC871B31DE2A7559 /* Theme.swift in Sources */,
+				93291D072B2A4C182D932CFB /* TripDetailScreen.swift in Sources */,
+				D413533EAAFB7BFDBDA9E862 /* TripEditorView.swift in Sources */,
+				639A14F6FF08C8D890C65D47 /* TripListScreen.swift in Sources */,
 				5695EA73C3F387130438F038 /* TripMain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
