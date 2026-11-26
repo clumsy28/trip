@@ -33,7 +33,7 @@ $MAPSHAPER "$CACHE/admin1_10m.geojson" \
 echo "• Simplifying world countries"
 $MAPSHAPER "$CACHE/countries50.geojson" \
   -filter "CONTINENT !== 'Antarctica'" \
-  -filter-fields ADM0_A3,ISO_A3_EH,NAME,NAME_TR,CONTINENT,TYPE,LABEL_X,LABEL_Y \
+  -filter-fields ADM0_A3,ISO_A3_EH,NAME,NAME_TR,CONTINENT,REGION_UN,SUBREGION,TYPE,LABEL_X,LABEL_Y \
   -simplify 25% keep-shapes \
   -clean \
   -o "$CACHE/world.simplified.geojson" precision=0.005 force

@@ -7,6 +7,7 @@ Output schema (one JSON file per pack):
   "projection": "mercator" | "equalEarth",
   "parentRegionID": "TUR" | null,          # world region this pack subdivides
   "groupTitle": "Bölge" | "Kıta",
+  "unitName": "il" | "ülke",               # noun used in "81 ilden 23 il gezildi"
   "groups": [...],                         # display order of groups
   "regions": [{
      "id": "TR-34", "name": "İstanbul", "group": "Marmara",
@@ -39,6 +40,7 @@ CONTINENTS_TR = {
     "South America": "Güney Amerika",
     "Oceania": "Okyanusya",
     "Seven seas (open ocean)": "Okyanus Adaları",
+    "Americas": None,  # resolved via SUBREGION
 }
 CONTINENT_ORDER = ["Avrupa", "Asya", "Afrika", "Kuzey Amerika", "Güney Amerika", "Okyanusya", "Okyanus Adaları"]
 
@@ -162,6 +164,7 @@ def pack_turkey(path, provinces_csv):
         "projection": "mercator",
         "parentRegionID": "TUR",
         "groupTitle": "Bölge",
+        "unitName": "il",
         "groups": TR_REGIONS,
         "regions": regions,
     }
@@ -182,7 +185,12 @@ def pack_world(path):
         if rid in ids:
             fail(f"duplicate world id {rid} ({p['NAME']})")
         ids.add(rid)
-        continent = CONTINENTS_TR.get(p["CONTINENT"])
+        raw_continent = p["CONTINENT"]
+        if raw_continent.startswith("Seven seas") and p.get("REGION_UN") in CONTINENTS_TR:
+            raw_continent = p["REGION_UN"]  # e.g. Maldives → Asia, Mauritius → Africa
+        if raw_continent == "Americas":
+            raw_continent = "South America" if p.get("SUBREGION") == "South America" else "North America"
+        continent = CONTINENTS_TR.get(raw_continent)
         if continent is None:
             fail(f"unknown continent {p['CONTINENT']}")
         counts = rid in allowed and rid not in counted
@@ -205,6 +213,7 @@ def pack_world(path):
         "projection": "equalEarth",
         "parentRegionID": None,
         "groupTitle": "Kıta",
+        "unitName": "ülke",
         "groups": CONTINENT_ORDER,
         "regions": regions,
     }

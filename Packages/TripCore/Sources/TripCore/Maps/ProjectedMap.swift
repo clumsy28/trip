@@ -8,9 +8,11 @@ public struct ProjectedMap: Sendable {
         public let id: String
         public let rings: [[PlanarPoint]]
         public let bounds: BoundingBox
+        /// Bounds of the largest part only (mainland without far-away islands), for label fitting.
+        public let mainBounds: BoundingBox
         public let label: PlanarPoint
-        /// Approximate on-screen size in unit space, used to decide when labels fit.
-        public var size: Double { max(bounds.width, bounds.height) }
+        /// Approximate size of the main part in unit space, used to decide when labels fit.
+        public var size: Double { max(mainBounds.width, mainBounds.height) }
     }
 
     public let packID: String
@@ -40,14 +42,19 @@ public struct ProjectedMap: Sendable {
         self.scale = 1 / height
         self.regions = raw.map { r in
             var b = BoundingBox.empty
+            var main = BoundingBox.empty
             let rings = r.rings.map { ring in
-                ring.map { p -> PlanarPoint in
+                var rb = BoundingBox.empty
+                let projected = ring.map { p -> PlanarPoint in
                     let u = unit(p)
-                    b.include(x: u.x, y: u.y)
+                    rb.include(x: u.x, y: u.y)
                     return u
                 }
+                b = b.union(rb)
+                if rb.width * rb.height > (main.isEmpty ? -1 : main.width * main.height) { main = rb }
+                return projected
             }
-            return Region(id: r.id, rings: rings, bounds: b, label: unit(r.label))
+            return Region(id: r.id, rings: rings, bounds: b, mainBounds: main.isEmpty ? b : main, label: unit(r.label))
         }
     }
 

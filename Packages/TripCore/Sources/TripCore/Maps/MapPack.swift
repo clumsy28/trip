@@ -66,18 +66,21 @@ public struct MapPack: Identifiable, Sendable {
     public let parentRegionID: String?
     /// "Bölge" / "Kıta"
     public let groupTitle: String
+    /// Noun for one region: "il" / "ülke".
+    public let unitName: String
     public let groups: [String]
     public let regions: [MapRegion]
     private let indexByID: [String: Int]
 
     public init(id: String, name: String, version: Int, projection: ProjectionKind, parentRegionID: String?,
-                groupTitle: String, groups: [String], regions: [MapRegion]) {
+                groupTitle: String, unitName: String = "bölge", groups: [String], regions: [MapRegion]) {
         self.id = id
         self.name = name
         self.version = version
         self.projection = projection
         self.parentRegionID = parentRegionID
         self.groupTitle = groupTitle
+        self.unitName = unitName
         self.groups = groups
         self.regions = regions
         var index: [String: Int] = [:]
@@ -110,6 +113,7 @@ public struct MapPack: Identifiable, Sendable {
         let projection: ProjectionKind
         let parentRegionID: String?
         let groupTitle: String
+        let unitName: String?
         let groups: [String]
         let regions: [Region]
     }
@@ -143,13 +147,15 @@ public struct MapPack: Identifiable, Sendable {
                 rings: rings)
         }
         return MapPack(id: dto.id, name: dto.name, version: dto.version, projection: dto.projection,
-                       parentRegionID: dto.parentRegionID, groupTitle: dto.groupTitle, groups: dto.groups,
-                       regions: regions)
+                       parentRegionID: dto.parentRegionID, groupTitle: dto.groupTitle,
+                       unitName: dto.unitName ?? "bölge", groups: dto.groups, regions: regions)
     }
 }
 
 /// A reference to a region inside a specific pack, e.g. `turkey:TR-34`.
-public struct RegionRef: Hashable, Sendable, Codable, CustomStringConvertible {
+public struct RegionRef: Hashable, Sendable, Codable, Identifiable, CustomStringConvertible {
+    public var id: String { key }
+
     public let packID: String
     public let regionID: String
 

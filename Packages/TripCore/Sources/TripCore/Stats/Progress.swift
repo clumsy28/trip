@@ -139,7 +139,7 @@ public struct TripStats: Sendable {
         latestNewRegion = firstVisit.values.max { $0.start < $1.start }
     }
 
-    static func days(of trip: TripSummary, calendar: Calendar) -> [Date] {
+    public static func days(of trip: TripSummary, calendar: Calendar) -> [Date] {
         var day = calendar.startOfDay(for: trip.start)
         let last = calendar.startOfDay(for: trip.end)
         var result: [Date] = []
