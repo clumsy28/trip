@@ -51,6 +51,7 @@ struct MapScreen: View {
                 })
                 .presentationDetents([.medium, .large])
                 .presentationDragIndicator(.visible)
+                .presentationBackground(Theme.background)
             }
             .sheet(isPresented: $showSearch, onDismiss: {
                 selection = pendingSelection

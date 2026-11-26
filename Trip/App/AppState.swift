@@ -82,6 +82,15 @@ enum LaunchOptions {
         return value(after: "-openRegion").flatMap(RegionRef.init(key:))
     }
 
+    /// `-autoImport` opens the auto-import sheet and starts scanning right away.
+    static var autoImport: Bool { arguments.contains("-autoImport") }
+    private static var autoImportConsumed = false
+    static func takeAutoImportStart() -> Bool {
+        guard !autoImportConsumed else { return false }
+        autoImportConsumed = true
+        return autoImport
+    }
+
     /// `-openTrip` pushes a sample trip's detail screen once (for screenshots).
     static func takeOpenTrip() -> Bool {
         guard !openTripConsumed else { return false }

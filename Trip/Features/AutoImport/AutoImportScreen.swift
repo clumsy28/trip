@@ -135,6 +135,13 @@ struct AutoImportScreen: View {
             }
             .navigationTitle("Gezilerini bul")
             .navigationBarTitleDisplayMode(.inline)
+            .task {
+                #if DEBUG
+                if LaunchOptions.takeAutoImportStart() {
+                    await model.start(store: store, app: app, context: context)
+                }
+                #endif
+            }
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
                     Button("Kapat") { dismiss() }

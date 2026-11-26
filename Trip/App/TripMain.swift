@@ -26,6 +26,7 @@ struct TripMain: App {
         if LaunchOptions.seedDemoData {
             DemoData.seed(into: container.mainContext, appState: state)
         }
+        if LaunchOptions.autoImport { state.isAutoImportPresented = true }
         #endif
         _appState = State(initialValue: state)
     }
