@@ -1,0 +1,84 @@
+name: Trip
+options:
+  bundleIdPrefix: com.clumsy28
+  deploymentTarget:
+    iOS: "18.0"
+  developmentLanguage: tr
+  createIntermediateGroups: true
+  groupSortPosition: top
+
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    MARKETING_VERSION: "0.1.0"
+    CURRENT_PROJECT_VERSION: "1"
+    DEVELOPMENT_TEAM: ""
+    CODE_SIGN_STYLE: Automatic
+
+packages:
+  TripCore:
+    path: Packages/TripCore
+
+targets:
+  Trip:
+    type: application
+    platform: iOS
+    sources:
+      - path: Trip
+    dependencies:
+      - package: TripCore
+    info:
+      path: Trip/Info.plist
+      properties:
+        CFBundleDisplayName: Trip
+        CFBundleDevelopmentRegion: tr
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        UILaunchScreen:
+          UIColorName: LaunchBackground
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: false
+        NSPhotoLibraryUsageDescription: Gezilerine fotoğraf ve video eklemek, fotoğraflarının konum ve tarih bilgisinden gezilerini otomatik bulmak için galerine erişmek istiyoruz. Fotoğrafların cihazından dışarı çıkmaz.
+        PHPhotoLibraryPreventAutomaticLimitedAccessAlert: true
+        ITSAppUsesNonExemptEncryption: false
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.clumsy28.trip
+        PRODUCT_NAME: Trip
+        # The SwiftData model is called `Trip`; give the module a different name to avoid ambiguity.
+        PRODUCT_MODULE_NAME: TripApp
+        SWIFT_DEFAULT_ACTOR_ISOLATION: MainActor
+        SWIFT_APPROACHABLE_CONCURRENCY: YES
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        TARGETED_DEVICE_FAMILY: "1"
+        ENABLE_PREVIEWS: YES
+
+  TripUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources:
+      - path: TripUITests
+    dependencies:
+      - target: Trip
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.clumsy28.trip.uitests
+        TEST_TARGET_NAME: Trip
+        GENERATE_INFOPLIST_FILE: YES
+
+schemes:
+  Trip:
+    build:
+      targets:
+        Trip: all
+        TripUITests: [test]
+    run:
+      config: Debug
+    test:
+      config: Debug
+      targets:
+        - package: TripCore/TripCoreTests
+        - TripUITests
